@@ -1,3 +1,38 @@
-#heading{
-    color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.logo-container {
+  margin-right: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.search-container {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.user-container {
+  margin-left: 20px;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
