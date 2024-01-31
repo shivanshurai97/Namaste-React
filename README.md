@@ -19,3 +19,24 @@
 - HTTPs
 - Tree Shaking
 - Different Dev and Prod Bundles
+
+# Namaste Food
+
+/*
+AppLayout
+    -Header
+        -Logo
+        -NavItems
+    -Body
+        -SearchInput
+        -RestaurantContainer
+            -RestaurantCard
+                -ResLogo
+                -ResName
+                -ResDetails
+    -Footer
+        -Copyright
+        -Links
+        -Address
+        -Contact
+*/
