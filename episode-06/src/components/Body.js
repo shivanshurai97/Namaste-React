@@ -1,7 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { DATA_URL } from "../utils/constants";
 
 const Body = () => {
   // local State Variable useState
@@ -19,7 +18,9 @@ const Body = () => {
 
   //live api call to get restaurants data
   const fetchData = async () => {
-    const data = await fetch(DATA_URL);
+    const data = await fetch(
+      "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6974538&lng=77.28792419999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
     const json = await data.json();
     setListOfRestaurants(
       // Optional Chaining
