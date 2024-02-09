@@ -54,7 +54,7 @@ AppLayout
 - React Router
 - Dynamic Routing
 - Outlet Component
-- Class Based Component(CBC)
+- Class Based Component (cbc)
 - Lifecycle Methods
   - componentDidMount
   - componentDidUpdate
