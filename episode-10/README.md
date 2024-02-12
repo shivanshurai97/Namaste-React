@@ -63,4 +63,3 @@ AppLayout
 - Cleanup in useEffect
 - Custom Hooks
 - Dynamic Import/ Lazy Loading
-- Tailwind CSS
