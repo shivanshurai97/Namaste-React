@@ -64,6 +64,6 @@ AppLayout
 - Custom Hooks
 - Dynamic Import/ Lazy Loading
 - Tailwind CSS
-- Higher Order Components(HOC)
+- Higher Order Components
 - Controlled and Uncontrolled Components
 - Lifting the State Up
