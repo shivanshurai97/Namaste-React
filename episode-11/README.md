@@ -64,6 +64,9 @@ AppLayout
 - Custom Hooks
 - Dynamic Import/ Lazy Loading
 - Tailwind CSS
-- Higher Order Components
+- Higher Order Components(HOC)
 - Controlled and Uncontrolled Components
 - Lifting the State Up
+- Context API
+- Context Provider & Context Consumer
+- useContext hook

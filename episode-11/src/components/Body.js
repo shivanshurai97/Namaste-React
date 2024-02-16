@@ -1,14 +1,18 @@
 import RestaurantCard, { withTopRatedLabel } from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import useRestaurantsList from "../utils/useRestaurantsList";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, filteredRestaurants, setFilteredRestaurants] =
     useRestaurantsList();
 
   const [searchText, setSearchText] = useState("");
+
+  // Context Example
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
 
@@ -65,6 +69,17 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        {/* Code to show how to bind logged in user with the input field through context */}
+        <div>
+          <input
+            type="text"
+            className="w-72 ml-7 mr-3 p-1 border border-black rounded-lg"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          ></input>
+        </div>
       </div>
       <div className="flex flex-wrap px-16">
         {filteredRestaurants.map((restaurant) =>

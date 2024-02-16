@@ -67,3 +67,6 @@ AppLayout
 - Higher Order Components(HOC)
 - Controlled and Uncontrolled Components
 - Lifting the State Up
+- Context API
+- Context Provider & Context Consumer
+- useContext hook

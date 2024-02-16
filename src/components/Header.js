@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 // import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
+  const { loggedInUser } = useContext(UserContext);
   //This can be used to create a symbol in header to show if the user is online/offline
   // const onlineStatus = useOnlineStatus();
   return (
     <div className="mb-10 flex justify-between items-center m-1 p-5 bg-[#f0f0f0] rounded-2xl shadow-2xl">
-      <div>
+      <div className="flex">
         <img className="w-24 rounded-full" alt="app-logo" src={LOGO_URL} />
+        <p className="m-4 p-4 text-2xl hover:text-orange-400">Namaste Food</p>
       </div>
       <div>
         <ul className="flex px-1">
@@ -41,6 +45,9 @@ const Header = () => {
             >
               {btnName}
             </button>
+          </li>
+          <li className="text-xl m-4 hover:text-orange-500 hover:font-bold">
+            {loggedInUser}
           </li>
         </ul>
       </div>

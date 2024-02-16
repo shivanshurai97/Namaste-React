@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,6 +8,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import UserContext from "./utils/UserContext";
 // import Grocery from "./components/Grocery";
 
 // Chunking
@@ -17,14 +18,25 @@ import RestaurantMenu from "./components/RestaurantMenu";
 // On-demand Loading
 // Dynamic Import
 
+//UserContext.Provider used to update the data in context
+//whatever is wrapped inside will get reflected with the updated value
+
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    //authentication api
+    setUserName("Shivanshu Rai");
+  }, []);
   return (
     <div>
-      <Header />
-      <Outlet />
-      {/* <Footer /> */}
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <Header />
+        <Outlet />
+        {/* <Footer /> */}
+      </UserContext.Provider>
     </div>
   );
 };
