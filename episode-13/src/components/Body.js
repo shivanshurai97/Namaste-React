@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import useRestaurantsList from "../utils/useRestaurantsList";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
+// import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, filteredRestaurants, setFilteredRestaurants] =
@@ -27,7 +27,6 @@ const Body = () => {
       </div>
     );
   }
-
   //Conditional Rendering
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
@@ -36,6 +35,7 @@ const Body = () => {
       <div className="my-3 px-14 py-3 flex">
         <div className="mr-5 ml-3">
           <input
+            data-testid="searchInput"
             type="text"
             className="w-72 ml-7 mr-3 p-1 border border-black rounded-lg"
             placeholder="Search Restaurants or Cuisines ..."
@@ -67,7 +67,7 @@ const Body = () => {
             setFilteredRestaurants(filteredList);
           }}
         >
-          Top Rated Restaurant
+          Top Rated Restaurants
         </button>
         {/* Code to show how to bind logged in user with the input field through context */}
         {/* <div>
@@ -82,7 +82,7 @@ const Body = () => {
         </div> */}
       </div>
       <div className="flex flex-wrap px-16">
-        {filteredRestaurants.map((restaurant) =>
+        {filteredRestaurants?.map((restaurant) =>
           restaurant.info.avgRating > 4 ? (
             <RestaurantCardTopRated
               key={restaurant.info.id}

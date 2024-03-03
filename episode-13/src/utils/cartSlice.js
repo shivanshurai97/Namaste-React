@@ -14,10 +14,14 @@ const cartSlice = createSlice({
   reducers: {
     // to set the restaurant from which food item is being added
     setRestaurant: (state, action) => {
-      if (action?.payload?.id !== state?.restaurant.id) {
+      if (state?.restaurant.id) {
+        if (action?.payload?.id !== state?.restaurant.id) {
+          state.restaurant = action.payload;
+          // clearing the cart items if user is trying to add food from another restaurant
+          state.items.length = 0;
+        }
+      } else {
         state.restaurant = action.payload;
-        // clearing the cart items if user is trying to add food from another restaurant
-        state.items.length = 0;
       }
     },
     addItem: (state, action) => {

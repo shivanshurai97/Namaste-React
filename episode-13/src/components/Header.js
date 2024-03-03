@@ -36,12 +36,11 @@ const Header = () => {
           </li>
           <li className="text-xl m-4 hover:text-orange-500 hover:font-bold">
             <Link to="/cart">
-              Cart
               {cartItems.length === 0 ? (
-                <span>({cartItems.length})</span>
+                <span>Cart({cartItems.length})</span>
               ) : (
                 <span className="text-green-500 font-bold">
-                  ({cartItems.length})
+                  Cart({cartItems.length})
                 </span>
               )}
             </Link>

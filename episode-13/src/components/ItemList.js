@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
 
   const resData = useRestaurantMenu(resId);
 
-  const restaurant = resData?.cards[2]?.card?.card?.info;
+  const restaurant = resData?.cards[0]?.card?.card?.info;
 
   const handleClick = (item) => {
     dispatch(setRestaurant(restaurant));
@@ -21,6 +21,7 @@ const ItemList = ({ items }) => {
     <div>
       {items.map((item) => (
         <div
+          data-testid="food-items"
           key={item.card.info.id}
           className=" px-1 pt-3 pb-6 flex justify-between border-b border-solid"
         >

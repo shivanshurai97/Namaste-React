@@ -1,0 +1,65 @@
+{
+  "info": {
+    "id": "697613",
+    "name": "Domino's Pizza",
+    "cloudinaryImageId": "0e7bc46a0e74d28b0d88e1fad2830dbc",
+    "locality": "Babarpur",
+    "areaName": "100 Ft Road",
+    "costForTwo": "₹400 for two",
+    "cuisines": ["Pizzas", "Italian", "Pastas", "Desserts"],
+    "avgRating": 4.1,
+    "parentId": "2456",
+    "avgRatingString": "4.1",
+    "totalRatingsString": "100+",
+    "sla": {
+      "deliveryTime": 30,
+      "serviceability": "SERVICEABLE",
+      "slaString": "30 mins",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-02-27 02:59:00",
+      "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "30% OFF",
+      "subHeader": "UPTO ₹75"
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+  },
+  "analytics": {
+    "context": "seo-data-9bfa58a8-39e0-45a1-8af2-912a11d93c86"
+  },
+  "cta": {
+    "link": "https://www.swiggy.com/restaurants/dominos-pizza-babarpur-100-ft-road-delhi-697613",
+    "text": "RESTAURANT_MENU",
+    "type": "WEBLINK"
+  },
+  "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

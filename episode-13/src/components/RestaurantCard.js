@@ -6,7 +6,10 @@ const RestaurantCard = ({ resData }) => {
     resData?.info;
   const { deliveryTime } = sla;
   return (
-    <div className="m-8 p-2 w-64 h-96 bg-[#f0f0f0] rounded-2xl hover:cursor-pointer hover:border hover:border-black hover:border-solid">
+    <div
+      data-testid="resCard"
+      className="m-8 p-2 w-64 h-96 bg-[#f0f0f0] rounded-2xl hover:cursor-pointer hover:border hover:border-black hover:border-solid"
+    >
       <Link to={"/restaurants/" + id}>
         <img
           className="w-60 h-44 object-cover rounded-2xl"
